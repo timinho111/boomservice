@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('api/lead/', views.LeadListCreate.as_view()),
-    path('api/hello/', views.MyOwnView.as_view(), name='hello'),
+    path('api/hello/', views.PlayersPage.as_view(), name='team'),
 ]
