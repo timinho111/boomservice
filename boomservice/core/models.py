@@ -13,10 +13,15 @@ class Player(models.Model):
     name = models.CharField(max_length=50)
     firstName = models.CharField(max_length=50)
     lastName = models.CharField(max_length=50)
-    dateOfBirth = models.DateField()
-    countryOfBirth = models.CharField(max_length=50)
-    position = models.CharField(max_length=20)
-    lastUpdated = models.DateTimeField()
+    age = models.IntegerField()
+    nationality = models.CharField(max_length=50)
+    height = models.CharField(max_length=50)
+    weight = models.CharField(max_length=50)
+    injured = models.BooleanField()
+    photo = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
 
 
 class Team(models.Model):

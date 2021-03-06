@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('api/lead/', views.LeadListCreate.as_view()),
-    path('api/hello/', views.PlayersPage.as_view(), name='team'),
+    path('api/getPlayers/', views.get_players_from_api),
+    path('api/players/', views.player_list)
 ]
